@@ -1,10 +1,5 @@
 --Census and School Data 
 
---Clean data, replace 'NULL' strings with NULL VALUES
-UPDATE school_data
-SET pct_proficient_reading = NULL
-WHERE pct_proficient_reading = 'NULL';
-
 -- How many public high schools are in each state?
 SELECT state_code, COUNT(DISTINCT school_name) AS 'Number of schools'
 FROM school_data
